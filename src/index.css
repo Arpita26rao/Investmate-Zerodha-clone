@@ -11,3 +11,84 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.footer {
+  background: #fafafa;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #424242;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px 30px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.logo {
+  color: #387ed1;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footer-col h4 {
+  font-size: 14px;
+  margin-bottom: 14px;
+  color: #000;
+}
+
+.footer-col p {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  font-size: 13px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #424242;
+}
+
+.footer-col ul li:hover {
+  color: #387ed1;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  border-top: 1px solid #e6e6e6;
+  padding-top: 20px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.footer-links {
+  color: #387ed1;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+  color: #387ed1;
+  font-size: 12px;
+}
+
+.footer-links span {
+  cursor: pointer;
+}
+
+.footer-links span:hover {
+  text-decoration: underline;
+}
