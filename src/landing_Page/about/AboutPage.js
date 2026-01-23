@@ -1,10 +1,13 @@
-import React from 'react';
+import Hero from "./Hero";
+import Team from "./Team";
 
- function Aboutpage() {
-  return( 
-   
-  <h1>About Page</h1>
+function AboutPage() {
+  return (
+    <>
+      <Hero />
+      <Team />
+    </>
   );
 }
 
-export default Aboutpage;
+export default AboutPage;
