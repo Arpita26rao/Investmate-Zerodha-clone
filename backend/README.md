@@ -27,3 +27,8 @@ This is the backend API for InvestMate (Zerodha Clone) built using Node.js, Expr
 ## 🚀 How to Run Project
 
 ### 1. Install dependencies
+
+### 2. Start MongoDB
+Make sure MongoDB is running locally
+
+### 3. Run server
