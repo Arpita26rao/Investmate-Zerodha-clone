@@ -1,16 +1,54 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #424242;
+  background-color: #ffffff;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Support Page */
+#supportHero {
+  background: linear-gradient(135deg, #8fbbf4, #eef5ff);
+  padding: 60px 0;
+}
+
+#supportWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 0 150px;
+}
+
+#supportHero h1,
+#supportHero h4,
+#supportHero p,
+#supportHero a {
+  color: #2d2d2d;
+}
+
+#supportHero input {
+  padding: 18px 25px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  outline: none;
+}
+
+#supportHero input:focus {
+  border-color: #387ed1;
+}
+
+/* Footer */
 .footer {
   background: #fafafa;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -72,11 +110,6 @@ code {
 }
 
 .footer-links {
-  color: #387ed1;
-  margin-top: 10px;
-  cursor: pointer;
-}
-.footer-links {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -92,20 +125,20 @@ code {
 .footer-links span:hover {
   text-decoration: underline;
 }
-#supportHero{
-  background-color: #387ed1;
-}
 
-#supportWrapper{
-  display: flex;
-  justify-content: space-between;
-  margin: 0 150px;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  #supportWrapper {
+    flex-direction: column;
+    margin: 0 25px;
+  }
 
-#supportHero input{
-  padding: 20px 50px;
-  width: 100%;
-  font-size: 20px;
-  border-radius: 10px;
-  border: none;
+  #supportHero input {
+    font-size: 16px;
+    padding: 15px 20px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
 }

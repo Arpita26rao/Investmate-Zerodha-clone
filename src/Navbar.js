@@ -1,23 +1,33 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav
-      class="navbar navbar-expand-lg border-bottom"
-      style={{ backgroundColor: "#FFF" }}
+      className="navbar navbar-expand-lg border-bottom"
+      style={{ backgroundColor: "#fff" }}
     >
-      <div class="container p-2">
-        <Link class="navbar-brand" to="/">
+      <div className="container p-2">
+        <Link className="navbar-brand d-flex align-items-center" to="/">
           <img
-            src="media/images/logo.svg"
-            style={{ width: "25%" }}
-            alt="Logo"
+            src="/media/images/logo.svg"
+            alt="InvestMate Logo"
+            style={{ width: "35px", marginRight: "10px" }}
           />
+          <span
+            style={{
+              fontWeight: "700",
+              fontSize: "24px",
+              color: "#387ed1",
+              letterSpacing: "1px",
+            }}
+          >
+            INVESTMATE
+          </span>
         </Link>
+
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -25,41 +35,53 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <form class="d-flex" role="search">
-            <ul class="navbar-nav mb-lg-0">
-              <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/signup">
+
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="ms-auto">
+            <ul className="navbar-nav mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link active" to="/login">
+                  Login
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="nav-link active" to="/signup">
                   Signup
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link active" aria-current="page"to="/about">
+
+              <li className="nav-item">
+                <Link className="nav-link active" to="/about">
                   About
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link active" aria-current="page"to="/product">
-                  Product
+
+              <li className="nav-item">
+                <Link className="nav-link active" to="/product">
+                  Products
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link active"  aria-current="page"to="/pricing">
+
+              <li className="nav-item">
+                <Link className="nav-link active" to="/pricing">
                   Pricing
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link active" aria-current="page"to="/Support">
+
+              <li className="nav-item">
+                <Link className="nav-link active" to="/support">
                   Support
                 </Link>
               </li>
             </ul>
-          </form>
+          </div>
         </div>
       </div>
     </nav>
   );
 }
+
 export default Navbar;
