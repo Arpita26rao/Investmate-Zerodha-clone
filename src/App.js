@@ -1,12 +1,5 @@
-
-import Holdings from "./components/Holdings";
-
 function App() {
-  return (
-    <div>
-      <Holdings />
-    </div>
-  );
+  return <h1>HELLO FRONTEND</h1>;
 }
 
 export default App;
