@@ -5,27 +5,27 @@ function Dashboard() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    // 🔒 protect route
+    // Protect Route
     if (!token) {
-      window.location.href = "/";
+      window.location.href = "/login";
+      return;
     }
 
-    // 🔗 call backend
+    // Backend API
     fetch("http://localhost:5000/api/auth/dashboard", {
       headers: {
-        Authorization: token
-      }
+        Authorization: token,
+      },
     })
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-    });
-
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    window.location.href = "/";
+    window.location.href = "/login";
   };
 
   return (
@@ -37,16 +37,5 @@ function Dashboard() {
     </div>
   );
 }
-useEffect(() => {
-  const token = localStorage.getItem("token");
-
-  fetch("http://localhost:5000/api/auth/dashboard", {
-    headers: {
-      Authorization: token
-    }
-  })
-  .then(res => res.json())
-  .then(data => console.log(data));
-}, []);
 
 export default Dashboard;

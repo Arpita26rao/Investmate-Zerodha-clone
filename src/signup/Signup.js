@@ -1,5 +1,5 @@
-
 import React, { useState } from "react";
+import axios from "axios";
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -17,11 +17,47 @@ function Signup() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(formData);
-    alert("Signup form working!");
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/auth/register",
+        {
+          fullName: formData.fullName,
+          email: formData.email,
+          password: formData.password,
+        }
+      );
+
+      console.log(res.data);
+
+      // Token save
+      localStorage.setItem("token", res.data.token);
+
+      alert("Registration Successful!");
+
+      // Form reset
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        password: "",
+        confirmPassword: "",
+      });
+
+    } catch (error) {
+      console.log(error);
+
+      alert(
+        error.response?.data?.message || "Something went wrong"
+      );
+    }
   };
 
   return (
@@ -29,6 +65,7 @@ function Signup() {
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="card shadow p-4">
+
             <h2 className="text-center mb-4">
               Create InvestMate Account
             </h2>
@@ -95,11 +132,12 @@ function Signup() {
                 />
               </div>
 
-              <button className="btn btn-primary w-100">
+              <button type="submit" className="btn btn-primary w-100">
                 Create Account
               </button>
 
             </form>
+
           </div>
         </div>
       </div>
