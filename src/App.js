@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import HomePage from "./home/Homepage";
-import AboutPage from "./landing_Page/about/AboutPage";
+import AboutPage from "./landing_Page/About/AboutPage";
 import Signup from "./signup/Signup";
-import Support from "./Support/SupportPage";
-import Products from "./Products/ProductPage";
+import Support from "./support/SupportPage";
+import Products from "./products/ProductPage";
 import PricingPage from "./pricing/PricingPage";
 import Holdings from "./Holdings/Holdings";
 import Dashboard from "./Dashboard";
-import Login from "./login/Login";
+import Login from "./login";
 
 function App() {
   return (
